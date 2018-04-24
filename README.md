@@ -4,6 +4,9 @@ This is useful with neon like text effects, hence the name 'BrokenNeon'. With th
 
 This library does not create any neon-like text effects. You have create that yourself. However, there are example in default.css file. Feel free to re-use it.
 
+# Library
+The library is called brokenneon.min.js and it can be found in the build folder, "/public". It's a minified version of the original source code found in the 'source' folder.
+
 # build
 The folder build has a couple of examples showing how to use BrokenNeon.js.
 
