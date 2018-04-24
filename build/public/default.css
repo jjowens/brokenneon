@@ -1,0 +1,55 @@
+html {
+    background-color: black;
+}
+
+.large-neon {
+    font-size: 60px;
+    font-family: 'Arial';
+    color: #fff;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080, 0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;
+    text-align: center;
+}
+
+.large-neon-hidden {
+    font-size: 60px;
+    font-family: 'Arial';
+    color: #fff;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080, 0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;
+    text-align: center;
+    opacity: 0;
+}
+
+.dead-light {
+    font-size: 60px;
+    font-family: 'Arial';
+    color: #fff;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080, 0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;
+    text-align: center;
+}
+
+.inactive-light {
+    opacity: 0.3;
+}
+
+.broken-light {
+    opacity: 0.25;
+}
+
+.large-text {
+    font-size: 60px;
+    font-family: 'Arial';
+    color: #fff;
+}
+
+button {margin-right: 5px; padding: 3px 4px 3px 4px;}
+
+.featurename {
+    color: white; text-align: left; font-weight: bold;  font-family: 'Arial';
+}
+
+.notes {
+    width: 450px; margin-left: auto; margin-right: auto; color: white; font-family: 'Arial';
+}
+
+a { color: white; }
+

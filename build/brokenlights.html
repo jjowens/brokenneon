@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="public/brokenneon.min.js"></script>
+    <link href="public/default.css" rel="stylesheet"/>
+    <script type="text/javascript">
+        var brokenObj = undefined;
+
+        function setupBroken() {
+            brokenObj = new brokenneon();
+
+            //PASS IN CLASS NAME OF ELEMENTS. SET MIN AND MAX OPACITY OF LETTERS ON EVERT INTERVAL
+            brokenObj.FlickerBroken().StartFlickering('broken-light', 0.25, 0.6, 800);
+        }
+
+    </script>
+</head>
+<body>
+<h2 class="featurename">FlickerBroken</h2>
+<div id="div-box" style="text-align: center; margin-top: 200px;">
+
+
+    <p class="large-neon">
+        Bro<span class="broken-light">k</span>en
+        Neon
+        L<span class="broken-light">i</span>ghts
+    </p>
+
+    <div class="notes">
+        <p>Some characters will flicker on and off, to create an illusion of a broken light.
+            Set the minimum and max opacity to create the illusion. Run it every 800ms or any other value you prefer</p>
+    </div>
+</div>
+<script type="text/javascript">
+    setupBroken();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="public/brokenneon.min.js"></script>
+    <link href="public/default.css" rel="stylesheet"/>
+    <script type="text/javascript">
+        var brokenObj = undefined;
+
+        function setupBroken() {
+            brokenObj = new brokenneon().NeonBuilder();
+
+            // CREATE ARRAY OF TEXT SHADOWS
+            var shadowArr = [];
+            shadowArr.push('0 0 5px #fff');
+            shadowArr.push('0 0 10px #fff');
+            shadowArr.push('0 0 20px #ff0080');
+            shadowArr.push('0 0 30px #ff0080');
+            shadowArr.push('0 0 40px #ff0080');
+            shadowArr.push('0 0 55px #ff0080');
+            shadowArr.push('0 0 75px #ff0080');
+
+            // INITALISE TEXT SHADOWS
+            brokenObj.CreateWithShadowArray('random-letter', shadowArr);
+
+            // ADD A FEW MORE
+            brokenObj.AddTextShadow('0 0 95px blue');
+            brokenObj.AddTextShadow('0 0 105px blue');
+            brokenObj.AddTextShadow('200 300 115px blue');
+
+            // REMOVE SOME TEXT SHADOWS
+            brokenObj.RemoveTextShadowByIndex(2);
+            brokenObj.RemoveTextShadowByIndex(3);
+
+            // CLEAR ALL TEXT SHADOWS
+            //brokenObj.ClearAllShadows();
+        }
+    </script>
+</head>
+<body>
+<h2 class="featurename">NeonBuilder</h2>
+<div id="div-box" style="text-align: center; margin-top: 200px;">
+        <p class="large-text">
+            <span class='random-letter'>B</span><span class='random-letter'>r</span><span class='random-letter'>o</span><span class='random-letter'>k</span><span class='random-letter'>e</span><span class='random-letter'>n</span> <span class='random-letter'>N</span><span class='random-letter'>e</span><span class='random-letter'>o</span><span class='random-letter'>n</span> <span class='random-letter'>L</span><span class='random-letter'>i</span><span class='random-letter'>g</span><span class='random-letter'>h</span><span class='random-letter'>t</span><span class='random-letter'>s</span>
+        </p>
+
+    <div class="notes">
+        <p>Neon Builder allows you to dynmically create text shadows inside an array.
+            Pass it into the API and it will store the array in memory.
+            It will build up a long string from each element in the array. That long string will be applied as a textShadow style</p>
+
+        <p>As the array is held in memory, you can add, insert or remove text shadows. It will automatically update the textshadows.</p>
+
+        <p>Please note you need to create an instance of NeonBuilder.</p>
+    </div>
+</div>
+<script type="text/javascript">
+    setupBroken();
+
+</script>
+</body>
+</html>

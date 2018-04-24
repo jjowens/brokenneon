@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="public/brokenneon.min.js"></script>
+    <link href="public/default.css" rel="stylesheet"/>
+    <script type="text/javascript">
+        var brokenObj = undefined;
+
+        function setupBroken() {
+            brokenObj = new brokenneon();
+
+            // TURN OFF ALL AT ONCE
+            brokenObj.ToggleLights().Toggle('random-letter',false, false, 1, 0, 100);
+
+            // SET TIMER TO SWITCH ON LIGHTS IN 5 SECONDS
+            setTimeout(function(){ toggleGradual(false) }, 5000);
+        }
+
+        function toggleGradual(toggleFlag) {
+            // SET UP PARAMETERS
+            var lightsOnOpacity = 1;
+            var lightsOffOpacity = 0.2;
+            var interval = 80;
+
+            // RESET FLAG SHOULD SET TO TRUE IF YOU WANT TO RESTART THE GRADUAL PROCESS.
+            // SET TO FALSE IF YOU WANT TO STOP
+            var resetFlag = true;
+
+            brokenObj.ToggleGradual().Toggle('random-letter',toggleFlag, lightsOnOpacity, lightsOffOpacity,interval, resetFlag);
+        }
+
+    </script>
+</head>
+<body>
+<h2 class="featurename">ToggleGradual</h2>
+<div id="div-box" style="text-align: center; margin-top: 200px;">
+        <p class="large-neon">
+            <span class='random-letter'>B</span><span class='random-letter'>r</span><span class='random-letter'>o</span><span class='random-letter'>k</span><span class='random-letter'>e</span><span class='random-letter'>n</span> <span class='random-letter'>N</span><span class='random-letter'>e</span><span class='random-letter'>o</span><span class='random-letter'>n</span> <span class='random-letter'>L</span><span class='random-letter'>i</span><span class='random-letter'>g</span><span class='random-letter'>h</span><span class='random-letter'>t</span><span class='random-letter'>s</span><span class='random-letter'></span>
+        </p>
+
+        <div class="notes">
+            <p >In 5 seconds, each character will light up.
+                NB: I used a hack to add an empty span i.e.
+                &lt;span class='random-letter'&gt;&lt;/span&gt; because near the end of the process, 's' wasn't lighting up.</p>
+        </div>
+
+</div>
+<script type="text/javascript">
+    setupBroken();
+
+</script>
+</body>
+</html>

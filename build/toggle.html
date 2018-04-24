@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="public/brokenneon.min.js"></script>
+    <link href="public/default.css" rel="stylesheet"/>
+    <script type="text/javascript">
+        var brokenObj = undefined;
+
+        function setupBroken() {
+            brokenObj = new brokenneon();
+        }
+        
+        function toggleLights(toggleFlag, individualFlag) {
+            var lightsOnOpacity = 1;
+            var lightsOffOpacity = 0.5;
+
+            // SET TO 80ms. INTERVAL IS ONLY USED WHEN YOU SET individualFlag TO TRUE
+            var interval = 80;
+
+            brokenObj.ToggleLights().Toggle('random-letter',toggleFlag, individualFlag, lightsOnOpacity, lightsOffOpacity,interval);
+        }
+
+    </script>
+</head>
+<body>
+<h2 class="featurename">ToggleLights</h2>
+<div id="div-box" style="text-align: center; margin-top: 200px;">
+        <p class="large-neon">
+            <span class='random-letter'>B</span><span class='random-letter'>r</span><span class='random-letter'>o</span><span class='random-letter'>k</span><span class='random-letter'>e</span><span class='random-letter'>n</span> <span class='random-letter'>N</span><span class='random-letter'>e</span><span class='random-letter'>o</span><span class='random-letter'>n</span> <span class='random-letter'>L</span><span class='random-letter'>i</span><span class='random-letter'>g</span><span class='random-letter'>h</span><span class='random-letter'>t</span><span class='random-letter'>s</span>
+        </p>
+    
+        <div style="text-align: center">
+            <button onclick="toggleLights(true, true)">Toggle Individual To On</button>
+            <button onclick="toggleLights(false, true)">Toggle Individual To Off</button>
+            <button onclick="toggleLights(true, false)">Toggle All To On</button>
+            <button onclick="toggleLights(false, false)">Toggle All To Off</button>
+        </div>
+
+    <div class="notes">
+    <p>You can toggle each character to light up or turn off. Alternatively, you can toggle all of the 'lights' at same time.
+        You can set the minimum and maximum of the opacity.</p>
+        <p>You don't have to use buttons to toggle 'lights'. Example, you can set a timeout to switch it on in 5 seconds</p>
+</div>
+</div>
+<script type="text/javascript">
+    setupBroken();
+
+</script>
+</body>
+</html>

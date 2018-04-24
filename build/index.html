@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="public/brokenneon.min.js"></script>
+    <link href="public/default.css" rel="stylesheet"/>
+    <script type="text/javascript">
+        var brokenObj = undefined;
+
+        function setupBroken() {
+            brokenObj = new brokenneon();
+            brokenObj.FlickerBroken().StartFlickering('broken-light', 0.25, 0.6, 800);
+        }
+
+    </script>
+</head>
+<body>
+<div id="div-box" style="text-align: left; color: white; font-family: Arial">
+    <h2>BrokenNeon API</h2>
+    <h3>List of API functions</h3>
+
+    <p><a href="brokenlights.html">FlickerBroken</a> - One or two text characters will flicker on and off to create a broken lights effect</p>
+
+    <p><a href="builder.html">NeonBuilder</a> - Create an array of textShadows and apply it to a text. You can add, insert or remove textShadows
+        and it will automatically update the neon lights effect</p>
+
+    <p><a href="random.html">RandomFlicker</a> - Each character will light up one by one. It'll start with the first character before stopping on
+        the last one. You can reset the effect every time it ends.</p>
+
+    <p><a href="gradual.html">ToggleGradual</a> - Each character will light up one by one. It'll start with the first character before stopping on
+        the last one. You can reset the effect every time it ends.</p>
+
+    <p><a href="toggle.html">ToggleLights</a> - Each character will light up one by one. It'll start with the first character before stopping on
+        the last one. You can reset the effect every time it ends.</p>
+
+    <p><a href="complex1.html">Complex Example 1</a> - Uses a combination of API calls. This turns off all lights,
+        then it will gradually light up each up each character. Finally, one of the lights will flicker as it's broken.
+    </p>
+</div>
+<script type="text/javascript">
+    setupBroken();
+
+</script>
+</body>
+</html>
