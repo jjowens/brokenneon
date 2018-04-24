@@ -2,7 +2,9 @@
 This is a javascript library allowing you to change the opacity of each HTML element, creating a flickering effect. 
 This is useful for neon like text effects. With this library, you can time a HTML element to flicker on and off.
 
-# Examples
+# build
 The folder build has a couple of examples showing how to use BrokenNeon.js.
+
+Inside the public folder, there is a minified version of BrokenNeon.js file. You can use this on your own website
 
 
